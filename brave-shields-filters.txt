@@ -1,0 +1,60 @@
+! ============================================================================
+! Filtro Anti-Spoilers ULTRA RIGOROSO de GTA 6 para o Brave Shields
+! Como usar:
+! 1. No Brave, abra: brave://settings/shields/filters
+! 2. Role ate "Criar filtros personalizados" (Create custom filters)
+! 3. Cole todo o conteudo abaixo e clique em "Salvar alteracoes"
+! ============================================================================
+
+! --- Bloqueio de paginas e miniaturas com URL de GTA / Rockstar / Leonida ---
+*/gta-6*$document,image
+*/gta_6*$document,image
+*/gta6*$document,image
+*/gta-vi*$document,image
+*/gta_vi*$document,image
+*/gtavi*$document,image
+*/grand-theft-auto*$document,image
+*/grand_theft_auto*$document,image
+*/r/GTA6*$document
+*/r/gtavi*$document
+*/r/rockstar*$document
+
+! --- YouTube (Home, Busca, Recomendados, Shorts, Previews, Comentarios, Notificacoes) ---
+www.youtube.com,m.youtube.com##ytd-rich-item-renderer:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.youtube.com,m.youtube.com##ytd-video-renderer:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.youtube.com,m.youtube.com##ytd-compact-video-renderer:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.youtube.com,m.youtube.com##yt-lockup-view-model:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.youtube.com,m.youtube.com##ytd-grid-video-renderer:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.youtube.com,m.youtube.com##ytd-reel-item-renderer:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.youtube.com,m.youtube.com##ytm-shorts-lockup-view-model:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.youtube.com,m.youtube.com##ytd-video-preview:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.youtube.com,m.youtube.com##ytd-comment-thread-renderer:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.youtube.com,m.youtube.com##ytd-notification-renderer:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+
+! --- X / Twitter (Posts e Assuntos do Momento) ---
+x.com,twitter.com##article[data-testid="tweet"]:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+x.com,twitter.com##div[data-testid="trend"]:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+
+! --- Reddit (Feed, Busca e Comentarios) ---
+reddit.com,www.reddit.com,sh.reddit.com##shreddit-post:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+reddit.com,www.reddit.com,sh.reddit.com##shreddit-post[post-title*="gta" i], shreddit-post[post-title*="grand theft auto" i], shreddit-post[post-title*="leonida" i], shreddit-post[post-title*="vice city" i], shreddit-post[post-title*="rockstar" i]
+reddit.com,www.reddit.com,sh.reddit.com##shreddit-comment:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+old.reddit.com##.thing:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+
+! --- Brave Search, Google Busca e Noticias ---
+search.brave.com##div.snippet:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+search.brave.com##div.video-snippet:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.google.com,www.google.com.br##div.g:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.google.com,www.google.com.br##div.tF2Cxc:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.google.com,www.google.com.br##g-card:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.google.com,www.google.com.br##div.SoaBEf:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+
+! --- Twitch, TikTok, Facebook e Discord ---
+www.twitch.tv##article:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.tiktok.com##div[data-e2e="recommend-list-item-container"]:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.tiktok.com##div[data-e2e="search_video-item"]:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+www.facebook.com##div[role="article"]:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+discord.com##li[id^="chat-messages-"]:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)
+
+! --- Artigos genericos em portais e blogs ---
+##article:has-text(/\b(gta|g\.t\.a|gtavi|gta6|gta-6|gta-vi|grand\s*theft\s*auto|leonida|vice\s*city|rockstar|take[\s._-]*(two|2))\b/i)

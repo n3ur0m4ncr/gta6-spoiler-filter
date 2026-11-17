@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Escudo Anti-Spoiler GTA 6",
+  "version": "1.0.0",
+  "description": "Filtra e bloqueia automaticamente posts, vídeos, títulos, comentários e páginas com possíveis spoilers de GTA 6 no Brave.",
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Escudo Anti-Spoiler GTA 6",
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/matcher.js", "src/content.js"],
+      "css": ["src/content.css"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escudo Anti-Spoiler GTA 6</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <img src="../icons/icon48.png" alt="Escudo" class="brand-icon" />
+        <div>
+          <h1>Escudo GTA 6</h1>
+          <p class="subtitle">Filtro anti-spoilers ativo</p>
+        </div>
+      </div>
+      <label class="switch" title="Ativar ou desativar o filtro">
+        <input type="checkbox" id="toggle-enabled" />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">Nesta aba</span>
+        <strong class="stat-value" id="tab-count">—</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Total bloqueado</span>
+        <strong class="stat-value" id="total-count">0</strong>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="field-label">Como agir ao detectar spoiler</div>
+      <div class="segmented" role="group" aria-label="Modo de bloqueio">
+        <button type="button" class="seg-btn" id="mode-hide" data-mode="hide">
+          Ocultar totalmente
+        </button>
+        <button type="button" class="seg-btn" id="mode-blur" data-mode="blur">
+          Borrar com aviso
+        </button>
+      </div>
+    </section>
+
+    <section class="panel toggles-panel">
+      <label class="toggle-row">
+        <div>
+          <span class="row-title">Proteção máxima</span>
+          <span class="row-desc">Bloqueia também "Rockstar", "Take-Two" e "Vice City"</span>
+        </div>
+        <input type="checkbox" id="toggle-strict" class="checkbox-pill" />
+      </label>
+
+      <label class="toggle-row">
+        <div>
+          <span class="row-title">Bloquear qualquer "GTA"</span>
+          <span class="row-desc">Filtra menções a "GTA" mesmo sem o "6" ou "VI"</span>
+        </div>
+        <input type="checkbox" id="toggle-any-gta" class="checkbox-pill" />
+      </label>
+
+      <label class="toggle-row">
+        <div>
+          <span class="row-title">Proteger página inteira</span>
+          <span class="row-desc">Bloqueia vídeos e artigos se URL, título ou meta for GTA 6</span>
+        </div>
+        <input type="checkbox" id="toggle-fullpage" class="checkbox-pill" />
+      </label>
+    </section>
+
+    <section class="panel" id="site-panel" hidden>
+      <div class="site-row">
+        <span class="site-name" id="site-hostname"></span>
+        <button type="button" class="btn-outline" id="btn-whitelist"></button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <label for="custom-keywords" class="field-label">
+        Palavras extras bloqueadas (1 por linha)
+      </label>
+      <textarea
+        id="custom-keywords"
+        rows="3"
+        placeholder="Ex: nome de canal, termo específico..."
+      ></textarea>
+      <div class="actions-row">
+        <span class="save-status" id="save-status"></span>
+        <button type="button" class="btn-primary" id="btn-save-keywords">Salvar lista</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="matcher.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

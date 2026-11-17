@@ -1,0 +1,157 @@
+.gta6sf-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.gta6sf-blurred {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 44px !important;
+}
+
+.gta6sf-blurred > *:not(.gta6sf-blur-badge) {
+  filter: blur(18px) !important;
+  opacity: 0.2 !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+.gta6sf-blur-badge {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 12px !important;
+  background: rgba(13, 11, 20, 0.72) !important;
+  backdrop-filter: blur(4px) !important;
+  color: #f8fafc !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+}
+
+.gta6sf-blur-badge-inner {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 12px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 92, 138, 0.16) !important;
+  border: 1px solid rgba(255, 92, 138, 0.5) !important;
+  color: #ffd1df !important;
+  line-height: 1.3 !important;
+}
+
+.gta6sf-blur-badge:hover .gta6sf-blur-badge-inner {
+  background: rgba(255, 92, 138, 0.28) !important;
+}
+
+#gta6sf-page-shield {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483647 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 24px !important;
+  background: radial-gradient(circle at top, #1f1636 0%, #0b0a12 70%) !important;
+  color: #f8fafc !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+#gta6sf-page-shield .gta6sf-shield-card {
+  max-width: 460px !important;
+  width: 100% !important;
+  padding: 28px 24px !important;
+  border-radius: 16px !important;
+  background: rgba(24, 21, 38, 0.96) !important;
+  border: 1px solid rgba(255, 92, 138, 0.35) !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6) !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+#gta6sf-page-shield .gta6sf-shield-icon {
+  width: 48px !important;
+  height: 48px !important;
+  margin: 0 auto 14px !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255, 92, 138, 0.14) !important;
+  border: 1px solid rgba(255, 92, 138, 0.4) !important;
+  font-size: 24px !important;
+}
+
+#gta6sf-page-shield h1 {
+  margin: 0 0 10px !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  line-height: 1.3 !important;
+}
+
+#gta6sf-page-shield p {
+  margin: 0 0 18px !important;
+  font-size: 14px !important;
+  color: #cbd5e1 !important;
+  line-height: 1.55 !important;
+}
+
+#gta6sf-page-shield .gta6sf-shield-reason {
+  display: inline-block !important;
+  margin-bottom: 20px !important;
+  padding: 5px 12px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #fda4af !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+#gta6sf-page-shield .gta6sf-shield-actions {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+#gta6sf-page-shield button {
+  width: 100% !important;
+  padding: 11px 16px !important;
+  border-radius: 10px !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: transform 0.1s ease, background 0.15s ease !important;
+  box-sizing: border-box !important;
+}
+
+#gta6sf-page-shield .gta6sf-btn-primary {
+  background: #ff5c8a !important;
+  color: #0b0a12 !important;
+  border: none !important;
+}
+
+#gta6sf-page-shield .gta6sf-btn-primary:hover {
+  background: #ff759c !important;
+}
+
+#gta6sf-page-shield .gta6sf-btn-secondary {
+  background: transparent !important;
+  color: #94a3b8 !important;
+  border: 1px solid rgba(148, 163, 184, 0.25) !important;
+}
+
+#gta6sf-page-shield .gta6sf-btn-secondary:hover {
+  color: #f8fafc !important;
+  border-color: rgba(148, 163, 184, 0.5) !important;
+}

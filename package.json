@@ -1,0 +1,14 @@
+{
+  "name": "gta6-spoiler-filter",
+  "version": "1.0.0",
+  "description": "Extensão Manifest V3 e regras nativas do Brave Shields para bloquear spoilers de GTA 6 / GTA VI.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "check": "node --check src/matcher.js && node --check src/content.js && node --check src/popup.js",
+    "test": "node --test tests/matcher.test.js tests/content.test.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
